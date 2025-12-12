@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abhishek Pal — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Abhishek Pal</h1>
+        <p class="role">Computer Science • Web Developer</p>
+      </div>
+
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / HOME -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h2>Hello — I'm Abhishek</h2>
+          <p>
+            I build clean, responsive websites and love solving problems with code.
+            Currently learning advanced web & backend technologies.
+          </p>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+
+        <!-- HERO CARD (with profile photo) -->
+        <div class="hero-card">
+          <div class="profile-photo">
+            <!-- Replace me.jpg with your image filename -->
+            <img src="abc.jpg" alt="Abhishek Pal">
+          </div>
+
+          <ul class="mini-info">
+            <li><strong>Location</strong><span>India</span></li>
+            <li><strong>Experience</strong><span>Fresher</span></li>
+            <li><strong>Availability</strong><span>Freelance & internships</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <!-- optional about photo on left -->
+        <div class="about-photo">
+          <img src="abc.jpg" alt="About — Abhishek Pal">
+        </div>
+
+        <div>
+          <div class="about-card">
+            <h3>About Me</h3>
+            <p>
+              I'm a motivated Computer Science student passionate about web based 
+              applications.Also a great enthusiast about data science with numerous libraries. 
+            </p>
+          </div>
+
+          <aside class="profile-card" style="margin-top:16px;">
+            <h4>Profile</h4>
+            <dl>
+              <div class="row"><dt>Age</dt><dd>20</dd></div>
+              <div class="row"><dt>Email</dt><dd>abhisheks005090@gmail.com</dd></div>
+              <div class="row"><dt>Phone</dt><dd>+91 8180097753</dd></div>
+              <div class="row"><dt>Languages</dt><dd>English(Proficiency),Hindi</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h3>Skills</h3>
+        <div class="skills-grid">
+          <div class="skill">
+            <h5>Frontend</h5>
+            <p>HTML, CSS, JavaScript</p>
+          </div>
+          <div class="skill">
+            <h5>Backend</h5>
+            <p>PHP, MySQL,Java</p>
+          </div>
+          <div class="skill">
+            <h5>Tools</h5>
+            <p>GitHub,VS Code,Google Collab</p>
+          </div>
+          <div class="skill">
+            <h5>Other</h5>
+            <p>Problem Solving, Data Structures</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+<section id="certifications" class="section">
+  <div class="container">
+    <h3>Certifications</h3>
+
+    <p class="cert-note">Here are some of my verified certificates. Click to view or download.</p>
+
+    <div class="cert-grid">
+
+      <!-- Certificate Card Example #1 -->
+      <div class="cert-card">
+        <img src="iit.jpg" alt="Certification 1">
+        <h4>IIT Madras(LOA)</h4>
+        <a href="certificate1.jpg" target="_blank" class="cert-btn">View Certificate</a>
+      </div>
+
+      <!-- Certificate Card Example #2 -->
+      <div class="cert-card">
+        <img src="tcs.jpg" alt="Certification 2">
+        <h4>TCS(Youth Professional)</h4>
+        <a href="certificate2.jpg" target="_blank" class="cert-btn">View Certificate</a>
+      </div>
+
+      <!-- Certificate Card Example #3 -->
+      <div class="cert-card">
+        <img src="gtt.jpg" alt="Certification 3">
+        <h4>Barclays Lifeskills Program</h4>
+        <a href="certificate3.jpg" target="_blank" class="cert-btn">View Certificate</a>
+      </div>
+
+       
+       
+
+    
+  </div>
+</section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <h3>Contact</h3>
+          <p>If you'd like to reach out — send a message below or email me directly.</p>
+          <ul>
+            <li><strong>Email:</strong> abhisheks005090@gmail.com</li>
+            <li><strong>Phone:</strong> +91 8180097753</li>
+          </ul>
+        </div>
+
+        <form class="contact-form" action="process.php" method="POST">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required />
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required />
+          </label>
+
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Abhishek Pal — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // auto year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // tiny script: adds/removes .active on nav links based on scroll / clicks
+    (function(){
+      const links = document.querySelectorAll('.nav a');
+      const sections = Array.from(links).map(a => document.querySelector(a.getAttribute('href')));
+      function setActive(){
+        const y = window.scrollY + window.innerHeight/3;
+        let idx = sections.findIndex(sec => sec && (sec.offsetTop <= y && sec.offsetTop + sec.offsetHeight > y));
+        links.forEach(l => l.classList.remove('active'));
+        if(idx >= 0) links[idx].classList.add('active');
+      }
+      window.addEventListener('scroll', setActive, {passive:true});
+      window.addEventListener('resize', setActive);
+      setActive();
+      links.forEach(l => l.addEventListener('click', ()=> setTimeout(setActive,120)));
+    })();
+  </script>
+</body>
+</html>
